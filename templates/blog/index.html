@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>안녕하세요</title>
+</head>
+<body>
+    <h2>안녕하세요~ 블로그에 오신 것을 환영합니다.</h2>
+    {% if post_list %}
+    <ul>
+        {% for post in post_list %}
+        <li>{{ post.title }}</li>
+        <div>
+            {% if post.photo %}
+            <img src="{{ post.photo.url }}">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </ul>
+    {% endif %}
+</body>
+</html>
