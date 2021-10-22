@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 폼</title>
+</head>
+<body>
+  <form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <fieldset>
+      <legend>글쓰기</legend>
+      {{ form.as_p }}
+      <button type="submit">저장하기</button>
+    </fieldset>
+  </form>
+</body>
+</html>

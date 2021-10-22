@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>블로그 상세 페이지</title>
+</head>
+<body>
+  <h2>{{ post.title }}</h2>
+  <div>
+      {% if post.photo %}
+      <img src="{{ post.photo.url }}">
+      {% endif %}
+  </div>
+</body>
+</html>
